@@ -59,10 +59,14 @@ let restaurantPickThree       = document.getElementById('restaurantPickThree');
 let restaurantPickThreeOutput = document.getElementById('restaurantPickThreeOutput');
 let restaurantPickThreeButton = document.getElementById('restaurantPickThreeButton');
 
+let nameEnter = document.getElementById('nameEnter');
+let nameEnterOutput = document.getElementById('nameEnterOutput');
+let nameEnterButton = document.getElementById('nameEnterButton');
+
 
 // Function Definition //
 const addNumberFetch = async () => {
-    const promise = await fetch('https://hostingtacos.azurewebsites.net/Taco');
+    const promise = await fetch(`https://allfourone.azurewebsites.net/TwoNumber/AddTwoNumbers/${addNumberOne.value}/${addNumberTwo.value}`);
     const data = await promise.text();
 
     if (addNumberOutput !== null) {
@@ -76,7 +80,7 @@ if (addNumberButton !== null) {
 }
 
 const questionOneFetch = async () => {
-    const promise = await fetch('http://localhost:5269/AskQuestion/AskFirstQuestion/AAA');
+    const promise = await fetch(`https://allfourone.azurewebsites.net/AskQuestion/AskFirstQuestion/${questionOne.value}`);
     const data = await promise.text();
 
     if (questionOneOutput !== null) {
@@ -90,7 +94,7 @@ if (questionOneButton !== null) {
 }
 
 const questionTwoFetch = async () => {
-    const promise = await fetch('https://hostingtacos.azurewebsites.net/Taco');
+    const promise = await fetch(`https://allfourone.azurewebsites.net/AskQuestion/AskSecondQuestion/${questionTwo.value}`);
     const data = await promise.text();
 
     if (questionTwoOutput !== null) {
@@ -104,7 +108,7 @@ if (questionTwoButton !== null) {
 }
 
 const compareNumberFetch = async () => {
-    const promise = await fetch('https://hostingtacos.azurewebsites.net/Taco');
+    const promise = await fetch(`https://allfourone.azurewebsites.net/GreaterOrLess/GreaterOrLessThan/${compareNumberOne.value}/${compareNumberTwo.value}`);
     const data = await promise.text();
 
     if (compareNumberOutput !== null) {
@@ -118,7 +122,7 @@ if (compareNumberButton !== null) {
 }
 
 const MadLibFetch = async () => {
-    const promise = await fetch('https://hostingtacos.azurewebsites.net/Taco');
+    const promise = await fetch(`https://allfourone.azurewebsites.net/MadLib/CreateStory/${fieldOne.value}/${fieldTwo.value}/${fieldThree.value}/${fieldFour.value}/${fieldFive.value}/${fieldSix.value}/${fieldSeven.value}/${fieldEight.value}/${fieldNine.value}/${fieldTen.value}`);
     const data = await promise.text();
 
     if (storyOutput !== null) {
@@ -132,7 +136,7 @@ if (fieldSubmitButton !== null) {
 }
 
 const OddEvenFetch = async () => {
-    const promise = await fetch('https://hostingtacos.azurewebsites.net/Taco');
+    const promise = await fetch(`https://allfourone.azurewebsites.net/OddEven/OddOrEven/${numberOE.value}`);
     const data = await promise.text();
 
     if (numberOEOutput !== null) {
@@ -146,7 +150,7 @@ if (numberOEButton !== null) {
 }
 
 const ReverseNumFetch = async () => {
-    const promise = await fetch('https://hostingtacos.azurewebsites.net/Taco');
+    const promise = await fetch(`https://allfourone.azurewebsites.net/ReverseNum/ReverseNum/${reverseNum.value}`);
     const data = await promise.text();
 
     if (reverseNumOutput !== null) {
@@ -160,7 +164,7 @@ if (reverseNumButton !== null) {
 }
 
 const ReverseABCFetch = async () => {
-    const promise = await fetch('https://hostingtacos.azurewebsites.net/Taco');
+    const promise = await fetch(`https://allfourone.azurewebsites.net/reverseABC/reverseABC/${reverseABC.value}`);
     const data = await promise.text();
 
     if (reverseABCOutput !== null) {
@@ -174,7 +178,7 @@ if (reverseABCButton !== null) {
 }
 
 const EightBallFetch = async () => {
-    const promise = await fetch('https://hostingtacos.azurewebsites.net/Taco');
+    const promise = await fetch(`https://allfourone.azurewebsites.net/EightBall/AskQuestion/${ballQuestion.value}`);
     const data = await promise.text();
 
     if (ballQuestionOutput !== null) {
@@ -188,7 +192,7 @@ if (ballQuestionButton !== null) {
 }
 
 const CategoryCountryFetch = async () => {
-    const promise = await fetch('https://hostingtacos.azurewebsites.net/Taco');
+    const promise = await fetch(`https://allfourone.azurewebsites.net/RestaurantPicker/CategoryOrigin/${restaurantPickOne.value}`);
     const data = await promise.text();
 
     if (restaurantPickOneOutput !== null) {
@@ -202,7 +206,7 @@ if (restaurantPickOneButton !== null) {
 }
 
 const CategoryFoodFetch = async () => {
-    const promise = await fetch('https://hostingtacos.azurewebsites.net/Taco');
+    const promise = await fetch(`https://allfourone.azurewebsites.net/RestaurantPicker/CategoryFood/${restaurantPickTwo.value}`);
     const data = await promise.text();
 
     if (restaurantPickTwoOutput !== null) {
@@ -216,7 +220,7 @@ if (restaurantPickTwoButton !== null) {
 }
 
 const CategoryRatingFetch = async () => {
-    const promise = await fetch('https://hostingtacos.azurewebsites.net/Taco');
+    const promise = await fetch(`https://allfourone.azurewebsites.net/RestaurantPicker/CategoryRating/${restaurantPickThree.value}`);
     const data = await promise.text();
 
     if (restaurantPickThreeOutput !== null) {
@@ -226,5 +230,19 @@ const CategoryRatingFetch = async () => {
 if (restaurantPickThreeButton !== null) {
     restaurantPickThreeButton.addEventListener('click', function() {
         CategoryRatingFetch();
+    });
+}
+
+const NameGreetingFetch = async () => {
+    const promise = await fetch(`https://allfourone.azurewebsites.net/Greeting/GetName/${nameEnter.value}`);
+    const data = await promise.text();
+
+    if (nameEnterOutput !== null) {
+        nameEnterOutput.textContent = data;
+    }
+}
+if (nameEnterButton !== null) {
+    nameEnterButton.addEventListener('click', function() {
+        NameGreetingFetch();
     });
 }
