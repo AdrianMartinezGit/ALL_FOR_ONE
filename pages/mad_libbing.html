@@ -40,6 +40,46 @@
 <body>
     <h1 class="text-5xl sm:text-6xl text-white text-center underline font-extrabold pt-5 sm:pt-10" style="filter: drop-shadow(4px 4px 12px rgba(0, 0, 0, 0.6))">Mad Libs</h1>
 
+    <section class="section" style="padding: 3rem 1.5rem;">
+        <div class="container" style="margin: 0 auto; position: relative;">
+            <div class="box" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 6px; display: block; padding: 2rem;">
+                <h1 class="text-white text-left font-extrabold text-5xl">Please enter a place:</h1><br>
+                <input type="text" id="fieldOne" style="width: 100%;" class="rounded-lg text-black" placeholder="Enter place here" required>
+                <br><br>
+                <h1 class="text-white text-left font-extrabold text-5xl">Please enter a living creature (Fiction / Non-Fiction):</h1><br>
+                <input type="text" id="fieldTwo" style="width: 100%;" class="rounded-lg text-black" placeholder="Enter creature here" required>
+                <br><br>
+                <h1 class="text-white text-left font-extrabold text-5xl">Please enter living creature's pronouns (He, She, They):</h1><br>
+                <input type="text" id="fieldThree" style="width: 100%;" class="rounded-lg text-black" placeholder="Enter pronouns here" required>
+                <br><br>
+                <h1 class="text-white text-left font-extrabold text-5xl">Please enter an adjective:</h1><br>
+                <input type="text" id="fieldFour" style="width: 100%;" class="rounded-lg text-black" placeholder="Enter adjective here" required>
+                <br><br>
+                <h1 class="text-white text-left font-extrabold text-5xl">Please enter a verb (Ends with a 's'):</h1><br>
+                <input type="text" id="fieldFive" style="width: 100%;" class="rounded-lg text-black" placeholder="Enter verb here" required>
+                <br><br>
+                <h1 class="text-white text-left font-extrabold text-5xl">Please enter an adverb:</h1><br>
+                <input type="text" id="fieldSix" style="width: 100%;" class="rounded-lg text-black" placeholder="Enter adverb here" required>
+                <br><br>
+                <h1 class="text-white text-left font-extrabold text-5xl">Please enter a noun (Thing):</h1><br>
+                <input type="text" id="fieldSeven" style="width: 100%;" class="rounded-lg text-black" placeholder="Enter noun here" required>
+                <br><br>
+                <h1 class="text-white text-left font-extrabold text-5xl">Please enter a verb (Ends with a 'ed'):</h1><br>
+                <input type="text" id="fieldEight" style="width: 100%;" class="rounded-lg text-black" placeholder="Enter verb here" required>
+                <br><br>
+                <h1 class="text-white text-left font-extrabold text-5xl">Please enter a noun (Theme / Season):</h1><br>
+                <input type="text" id="fieldNine" style="width: 100%;" class="rounded-lg text-black" placeholder="Enter noun here" required>
+                <br><br>
+                <h1 class="text-white text-left font-extrabold text-5xl">Please enter how the ending plays out (Story is up to User Interpretation):</h1><br>
+                <input type="text" id="fieldTen" style="width: 100%;" class="rounded-lg text-black" placeholder="Enter ending here" required>
+                <br><br>
+                <h1 class="text-white text-left text-4xl" id="storyOutput">......</h1>
+                <br><br>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded" id="fieldSubmitButton">Create</button>
+            </div>
+        </div>
+    </section>
+
     <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
     <script src="../scripts/app.js"></script>
 </body>
